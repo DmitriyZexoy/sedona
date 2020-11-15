@@ -1,0 +1,129 @@
+:root {
+  --background: #f2f2f2;
+  --body-shadow: #dbd8d8;
+  --usual-text: #000;
+  --white: #fff;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("PT Sans"),
+  url("../fonts/ptsans.woff2") format("woff2"),
+  url("../fonts/ptsans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: local("PT Sans Bold"),
+  url("../fonts/ptsansbold.woff2") format("woff2"),
+  url("../fonts/ptsansbold.woff") format("woff");
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+html {
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--background);
+}
+
+ul,
+body,
+button,
+p,
+h1,
+h2,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: 0;
+  background: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  min-width: 768px;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  font-family: "PT Sans", sans-serif;
+  font-size: 14px;
+  color: var(--usual-text);
+  text-transform: uppercase;
+  box-shadow: 0 0 10px 1px var(--body-shadow);
+}
+
+.page-header {
+  width: 100%;
+  height: 56px;
+  background-color: var(--white);
+}
+
+.page-navigation {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.site-navigation {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-navigation__item {
+  width: 20%;
+}
+
+.site-navigation__item:first-of-type {
+  margin-left: 6%;
+}
+
+.site-navigation__item:last-of-type {
+  margin-right: 6%;
+}
+
+.site-navigation__item--margin-right {
+  margin-right: 8%;
+}
+
+.site-navigation__item--left {
+  text-align: left;
+}
+
+.site-navigation__item--right {
+  text-align: right;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+  left: calc(50% - 70px);
+}
+
+.site-navigation__link {
+  color: var(--usual-text);
+  font-weight: 700;
+}
